@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch Fruit - Jogo de Pegar Frutas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <h1>🍎 CATCH FRUIT 🍎</h1>
+        
+        <div class="game-info">
+            <div class="info-box">
+                <span>🎯 Pontos:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="info-box">
+                <span>❤️ Vidas:</span>
+                <span id="lives">3</span>
+            </div>
+            <div class="info-box">
+                <span>🏆 Recorde:</span>
+                <span id="highscore">0</span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="500" height="600"></canvas>
+        
+        <div class="controls">
+            <button id="startBtn" class="btn">▶ Iniciar</button>
+            <button id="pauseBtn" class="btn" disabled>⏸ Pausar</button>
+            <button id="restartBtn" class="btn">🔄 Reiniciar</button>
+        </div>
+        
+        <div class="instructions">
+            <p>🎮 Mova o mouse ou use as setas ← → para mover a cesta</p>
+            <p>🍎 Pegue frutas = +10 pontos | 💣 Bombas = perde 1 vida</p>
+            <p>⭐ A cada 100 pontos, a velocidade aumenta!</p>
+        </div>
+        
+        <!-- Telas de sobreposição -->
+        <div id="startOverlay" class="overlay">
+            <div class="overlay-card">
+                <h2>🍎 Catch Fruit 🍎</h2>
+                <p>Ajude a cesta a pegar as frutas!</p>
+                <p>Desvie das bombas e colete o máximo de pontos</p>
+                <button id="startGameBtn">Começar Jogo</button>
+            </div>
+        </div>
+        
+        <div id="pauseOverlay" class="overlay hidden">
+            <div class="overlay-card">
+                <h2>⏸ Jogo Pausado</h2>
+                <p>Clique em continuar para voltar</p>
+                <button id="resumeBtn">Continuar</button>
+            </div>
+        </div>
+        
+        <div id="gameoverOverlay" class="overlay hidden">
+            <div class="overlay-card">
+                <h2>💀 Game Over 💀</h2>
+                <p>Sua pontuação: <span id="finalScore">0</span></p>
+                <p id="newRecordMsg" class="hidden">🎉 NOVO RECORDE! 🎉</p>
+                <button id="playAgainBtn">Jogar Novamente</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/score.js"></script>
+    <script src="js/basket.js"></script>
+    <script src="js/item.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
