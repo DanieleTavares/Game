@@ -1,0 +1,3 @@
+Jogo feito com canvas, o que vai contra a especificação do trabalho.
+Implemenção do sistema express ausente.
+Nota: 1.5
